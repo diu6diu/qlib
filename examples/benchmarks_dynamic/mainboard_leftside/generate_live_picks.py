@@ -591,10 +591,10 @@ def main():
     )
 
     # 4. Hard filter: ST names. Blend scores are still heavily tied (dozens of
-    #    names share the top score), so the official tie-break can select adds
-    #    from anywhere in the ranked list — the ST check must cover the whole
-    #    cross-section, not just the top-N. Tradability (suspension) is already
-    #    applied above via the tradable mask.
+    # names share the top score), so the official tie-break can select adds
+    # from anywhere in the ranked list — the ST check must cover the whole
+    # cross-section, not just the top-N. Tradability (suspension) is already
+    # applied above via the tradable mask.
     out = Path(args.out_path)
     prev_holdings = find_prev_holdings(out.parent, target_date, max_rows=args.topk * 2) or set()
 
