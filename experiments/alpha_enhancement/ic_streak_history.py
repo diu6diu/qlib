@@ -109,7 +109,7 @@ def main():
     ic0_d = rank_ic_daily(z0, fwd)
     ic1_d = rank_ic_daily(z1, fwd)
     out = pd.DataFrame({"ic0": ic0, "ic1": ic1, "both_neg": both_neg, "ic0_d": ic0_d, "ic1_d": ic1_d})
-    out_path = REPO / "experiments" / "alpha_enhancement" / "results" / "ic_history.csv"
+    out_path = REPO / "experiments/alpha_enhancement/results/ic_history.csv"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(out_path)
     print(f"saved {out_path}")
